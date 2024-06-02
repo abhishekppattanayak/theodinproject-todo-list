@@ -1,12 +1,12 @@
 import delete2 from '../assets/delete2.png'
 import Project from '../factory/project.factory'
-const body = document.querySelector('body')
 
 function TodoList(key) {
   const data = JSON.parse(localStorage.getItem(key))
   const todos = data["todos"]
+  todos.sort((a,b)=>{return a["date"] > b["date"]})
   const ul = document.createElement('ul')
-  ul.classList.add('flex', 'flex-col', 'gap-2')
+  ul.classList.add('flex', 'flex-col', 'overflow-scroll', 'py-6')
 
   for(let i=0; i<todos.length; ++i){
     const todo = todos[i];
@@ -47,7 +47,7 @@ function TodoList(key) {
   
       const del = new Image();
       del.src = delete2;
-      del.classList.add('w-8', 'aspect-square', 'self-center',)
+      del.classList.add('w-8', 'aspect-square',)
   
       del.addEventListener('click', (e)=>{
         console.log(i)
