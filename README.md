@@ -1,6 +1,8 @@
-## theodinproject-todo-list
 # Todo List
 Grateful for folks at [Flaticon.com](https://www.flaticon.com) for providing such wonderful icons.
+
+## Update [2024-06-30 13:35 IST]:
+This is the legacy app made using webpack. Main branch is refactored using modern technologies.
 
 ## Icons used and attributions
 1. checklist.icon : <a href="https://www.flaticon.com/free-icons/list" title="list icons">List icons created by Kiranshastry - Flaticon</a>
